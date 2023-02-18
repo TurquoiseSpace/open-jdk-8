@@ -7,7 +7,12 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     steps:
+      -
+        name: Get Current Date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S-%Z-%z')"
       -
         name: Checkout repository
         uses: actions/checkout@v3
@@ -38,7 +43,7 @@ jobs:
 #          platforms: linux/amd64
           tags: |
             turquoisespace/open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
-            turquoisespace/open-jdk-8:$(date +%s)_${{ github.sha }}
+            turquoisespace/open-jdk-8:${{ steps.date.outputs.date }}_${{ github.sha }}
             turquoisespace/open-jdk-8:latest_jre_x64_alpine-linux_hotspot
       -
         name: Image digest
