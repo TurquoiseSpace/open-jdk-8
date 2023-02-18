@@ -58,11 +58,11 @@ RUN mv /tmp/gcc/usr/lib/libgcc* /tmp/gcc/usr/lib/libstdc++* /usr/glibc-compat/li
 RUN strip /usr/glibc-compat/lib/libgcc_s.so.* /usr/glibc-compat/lib/libstdc++.so*
 #RUN curl -LfsS ${ZLIB_URL} -o /tmp/libz.tar.xz
 #RUN echo "${ZLIB_SHA256} */tmp/libz.tar.xz" | sha256sum -c -
-RUN mkdir /tmp/libz
-RUN tar -xf /tmp/libz.tar.xz -C /tmp/libz
-RUN mv /tmp/libz/usr/lib/libz.so* /usr/glibc-compat/lib
+#RUN mkdir /tmp/libz
+#RUN tar -xf /tmp/libz.tar.xz -C /tmp/libz
+#RUN mv /tmp/libz/usr/lib/libz.so* /usr/glibc-compat/lib
 RUN apk del --purge .build-deps glibc-i18n
-RUN rm -rf /tmp/*.apk /tmp/gcc /tmp/gcc-libs.tar* /tmp/libz /tmp/libz.tar.xz /var/cache/apk/*
+#RUN rm -rf /tmp/*.apk /tmp/gcc /tmp/gcc-libs.tar* /tmp/libz /tmp/libz.tar.xz /var/cache/apk/*
 
 RUN set -eux;
 RUN apk add --no-cache --virtual .fetch-deps curl;
