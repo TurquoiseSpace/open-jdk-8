@@ -6,12 +6,12 @@ on:
 
 jobs:
 
-#  docker-build:
-#    runs-on: ubuntu-latest
-#    steps:
-#    - uses: actions/checkout@v3
-#    - name: Build the Docker Image
-#      run: docker build . --file Dockerfile --tag open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
+  test-variables:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Test
+      run: echo "Username is ${{ secrets.DockerHub_UserName }}"
 
   docker:
     runs-on: ubuntu-latest
