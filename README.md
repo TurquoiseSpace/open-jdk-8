@@ -3,7 +3,7 @@
 
 - Dockerized Open JDK 8
 - Latest JDK / JRE Build Version
-- Vulnerability Fixes (BusyBox, System User)
+- Vulnerability Fixes (BusyBox)
 
 
 ## Image Pull with Tag
