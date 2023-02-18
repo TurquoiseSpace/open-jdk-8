@@ -65,8 +65,8 @@ RUN apk del --purge .build-deps glibc-i18n
 #RUN rm -rf /tmp/libz /tmp/libz.tar.xz
 RUN rm -rf /tmp/*.apk /tmp/gcc /tmp/gcc-libs.tar* /var/cache/apk/*
 
-RUN set -eux;
-RUN apk add --no-cache --virtual .fetch-deps curl;
+RUN set -eux
+RUN apk add --no-cache --virtual .fetch-deps curl
 
 RUN echo "Identified Architecture : $(apk --print-arch)"
 RUN case "$(apk --print-arch)" in \
@@ -81,20 +81,20 @@ RUN case "$(apk --print-arch)" in \
 
 ENV JAVA_VERSION jdk8u362-b09
 ENV JAVA_HOME=/opt/java/openjdk
-ENV ESUM="f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc";
-ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz";
+ENV ESUM="f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc"
+ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz"
 
-RUN curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};
-#RUN wget -O /tmp/openjdk.tar.gz ${BINARY_URL};
+RUN curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL}
+#RUN wget -O /tmp/openjdk.tar.gz ${BINARY_URL}
 RUN echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;
-RUN mkdir -p "$JAVA_HOME";
-RUN cd /opt/java/openjdk;
-#RUN tar -xf /tmp/openjdk.tar.gz --strip-components=1;
+RUN mkdir -p "$JAVA_HOME"
+RUN cd /opt/java/openjdk
+#RUN tar -xf /tmp/openjdk.tar.gz --strip-components=1
 RUN tar --extract --file /tmp/openjdk.tar.gz --directory "$JAVA_HOME" --strip-components 1 --no-same-owner
-RUN apk del --purge .fetch-deps;
-RUN rm -rf /var/cache/apk/*;
-RUN rm -rf /tmp/openjdk.tar.gz;
-RUN rm -f ${JAVA_HOME}/src.zip;
+RUN apk del --purge .fetch-deps
+RUN rm -rf /var/cache/apk/*
+RUN rm -rf /tmp/openjdk.tar.gz
+RUN rm -f ${JAVA_HOME}/src.zip
 
 ENV PATH="$JAVA_HOME/bin:$PATH"
 
