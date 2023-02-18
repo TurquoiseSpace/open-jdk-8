@@ -6,7 +6,6 @@
 - Vulnerability Fixes (BusyBox, System User)
 
 
-
 ## Image Pull with Tag
 
 ```
@@ -35,6 +34,21 @@ https://github.com/TurquoiseSpace/open-jdk-8-docker
 https://hub.docker.com/r/turquoisespace/open-jdk-8
 
 https://hub.docker.com/repository/docker/turquoisespace/open-jdk-8/general
+
+
+## License
+
+Apache License Version 2.0
+
+https://www.apache.org/licenses/
+
+https://www.apache.org/licenses/LICENSE-2.0
+
+https://www.apache.org/licenses/LICENSE-2.0.txt
+
+https://spdx.org/licenses/Apache-2.0.html
+
+https://opensource.org/license/apache-2-0/
 
 
 ## References
