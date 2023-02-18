@@ -9,11 +9,11 @@
 ## Image Pull with Tag
 
 ```
-docker pull turquoisespace/open-jdk-8:latest_jre_x64_alpine-linux_hotspot
+docker pull turquoisespace/open-jdk-8:latest-jre-x64-alpine-linux-hotspot
 ```
 
 ```
-docker pull turquoisespace/open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
+docker pull turquoisespace/open-jdk-8:jdk8u362-b09-jre-x64-alpine-linux-hotspot
 ```
 
 
@@ -26,7 +26,7 @@ docker pull turquoisespace/open-jdk-8
 
 ## Git Hub
 
-https://github.com/TurquoiseSpace/open-jdk-8-docker
+https://github.com/TurquoiseSpace/open-jdk-8
 
 
 ## Docker Hub
