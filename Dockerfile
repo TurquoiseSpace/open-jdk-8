@@ -106,6 +106,7 @@ RUN java -version
 
 #RUN adduser -S -D -h /home/openjdk -s /bin/bash openjdk wheel
 #RUN adduser -D -b /home -s /bin/bash openjdk -G wheel
-RUN adduser openjdk -G wheel
+#RUN adduser openjdk -G wheel
+RUN adduser openjdk
 USER openjdk
 RUN whoami
