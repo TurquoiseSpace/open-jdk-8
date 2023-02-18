@@ -1,15 +1,36 @@
-name: Turquoise Space - Open JDK 8 - Docker Image CI
+name: Turquoise Space - Open JDK 8 - Docker Image CI / CD
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build:
+
+#  docker-build:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: Build the Docker Image
+#      run: docker build . --file Dockerfile --tag open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
+
+  docker:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DockerHub_UserName }}
+          password: ${{ secrets.DockerHub_PassWord }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: TurquoiseSpace/open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
