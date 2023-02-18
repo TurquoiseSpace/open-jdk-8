@@ -21,7 +21,8 @@ FROM alpine:3.17.2
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
 RUN apk -vv info | sort
-RUN apk add --no-cache tzdata --virtual .build-deps curl binutils zstd
+RUN apk add --no-cache tzdata --virtual .build-deps curl zstd
+#RUN apk add --no-cache --virtual binutils
 # fontconfig and ttf-dejavu added to support serverside image generation by Java programs
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu zlib
 
@@ -103,6 +104,7 @@ RUN apk -vv info | sort
 RUN echo "Verifying OpenJDK installation ..."
 RUN java -version
 
-RUN adduser -S -D -h /home/openjdk  -s /bin/bash openjdk wheel
+#RUN adduser -S -D -h /home/openjdk -s /bin/bash openjdk wheel
+RUN adduser -D -b /home -s /bin/bash openjdk -G wheel
 USER openjdk
 RUN whoami
