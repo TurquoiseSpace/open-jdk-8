@@ -56,7 +56,7 @@ RUN mkdir /tmp/gcc
 RUN zstd -d /tmp/gcc-libs.tar.zst --output-dir-flat /tmp
 RUN tar -xf /tmp/gcc-libs.tar -C /tmp/gcc
 RUN mv /tmp/gcc/usr/lib/libgcc* /tmp/gcc/usr/lib/libstdc++* /usr/glibc-compat/lib
-RUN strip /usr/glibc-compat/lib/libgcc_s.so.* /usr/glibc-compat/lib/libstdc++.so*
+#RUN strip /usr/glibc-compat/lib/libgcc_s.so.* /usr/glibc-compat/lib/libstdc++.so*
 #RUN curl -LfsS ${ZLIB_URL} -o /tmp/libz.tar.xz
 #RUN echo "${ZLIB_SHA256} */tmp/libz.tar.xz" | sha256sum -c -
 #RUN mkdir /tmp/libz
