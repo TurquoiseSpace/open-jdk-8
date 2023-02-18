@@ -38,7 +38,7 @@ jobs:
 #          platforms: linux/amd64
           tags: |
             turquoisespace/open-jdk-8:jdk8u362-b09_jre_x64_alpine-linux_hotspot
-            turquoisespace/open-jdk-8:${{ github.sha }}
+            turquoisespace/open-jdk-8:$(date +%s)_${{ github.sha }}
             turquoisespace/open-jdk-8:latest_jre_x64_alpine-linux_hotspot
       -
         name: Image digest
