@@ -1,5 +1,5 @@
 
-# Open JDK 8 Docker
+# Open JDK 8 - Docker Image
 
 Dockerized Open JDK 8
 
