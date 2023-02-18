@@ -105,6 +105,7 @@ RUN echo "Verifying OpenJDK installation ..."
 RUN java -version
 
 #RUN adduser -S -D -h /home/openjdk -s /bin/bash openjdk wheel
-RUN adduser -D -b /home -s /bin/bash openjdk -G wheel
+#RUN adduser -D -b /home -s /bin/bash openjdk -G wheel
+RUN adduser openjdk -G wheel
 USER openjdk
 RUN whoami
