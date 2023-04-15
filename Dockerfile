@@ -29,10 +29,10 @@ RUN apk -vv info | sort
 RUN apk -U upgrade -f
 RUN apk -vv info | sort
 
-ENV GLIBC_VER="2.35-r0"
+ENV GLIBC_VER="2.35-r1"
 ENV ALPINE_GLIBC_REPO="https://github.com/sgerrand/alpine-pkg-glibc/releases/download"
-ENV GCC_LIBS_URL="https://archive.archlinux.org/packages/g/gcc-libs/gcc-libs-10.1.0-2-x86_64.pkg.tar.zst"
-ENV GCC_LIBS_SHA256="f80320a03ff73e82271064e4f684cd58d7dbdb07aa06a2c4eea8e0f3c507c45c"
+ENV GCC_LIBS_URL="https://archive.archlinux.org/packages/g/gcc-libs/gcc-libs-12.2.1-4-x86_64.pkg.tar.zst"
+ENV GCC_LIBS_SHA256="9f6ed8f56d753071cfd0ece95c09ff7b6eb9131182ed5b5b1bd435feb7a00c31"
 ENV SGERRAND_RSA_SHA256="823b54589c93b02497f1ba4dc622eaef9c813e6b0f0ebbb2f771e32adf9f4ef2"
 
 RUN curl -LfsS https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub
