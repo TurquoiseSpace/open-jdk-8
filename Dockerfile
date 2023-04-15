@@ -70,10 +70,10 @@ RUN case "$(apk --print-arch)" in \
          ;; \
     esac;
 
-ENV JAVA_VERSION jdk8u362-b09
+ENV JAVA_VERSION jdk8u372-b07
 ENV JAVA_HOME=/opt/java/openjdk
 ENV ESUM="f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc"
-ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz"
+ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u372b07.tar.gz"
 
 RUN curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL}
 RUN echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;
