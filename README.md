@@ -13,7 +13,7 @@ docker pull turquoisespace/open-jdk-8:latest-jre-x64-alpine-linux-hotspot
 ```
 
 ```
-docker pull turquoisespace/open-jdk-8:jdk8u362-b09-jre-x64-alpine-linux-hotspot
+docker pull turquoisespace/open-jdk-8:jdk8u372-b07-jre-x64-alpine-linux-hotspot
 ```
 
 
