@@ -39,6 +39,7 @@ jobs:
           push: true
           tags: |
             turquoisespace/open-jdk-8:latest-jre-x64-alpine-linux-hotspot
+            turquoisespace/open-jdk-8:jdk8u362-ga-jre-x64-alpine-linux-hotspot
             turquoisespace/open-jdk-8:jdk8u362-b09-jre-x64-alpine-linux-hotspot
             turquoisespace/open-jdk-8:${{ steps.date.outputs.date }}_${{ github.sha }}
       -
