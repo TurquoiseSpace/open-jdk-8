@@ -2,8 +2,11 @@
 # Open JDK 8 - Docker Image
 
 - Dockerized Open JDK 8
-- Latest JDK / JRE Build Version
-- Vulnerability Fixes (BusyBox)
+- Latest alpine linux
+- Latest JRE build version
+- Latest glibc
+- Latest gcc-libs
+- BusyBox vulnerability fixed
 
 
 ## Image Pull with Tag
