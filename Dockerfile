@@ -72,7 +72,7 @@ RUN case "$(apk --print-arch)" in \
 
 ENV JAVA_VERSION jdk8u372-b07
 ENV JAVA_HOME=/opt/java/openjdk
-ENV ESUM="f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc"
+ENV ESUM="95d8cb8b5375ec00a064ed728eb60d925d44c1a79fe92f6ca7385b5863d4f78c"
 ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u372b07.tar.gz"
 
 RUN curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL}
