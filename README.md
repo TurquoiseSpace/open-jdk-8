@@ -1,6 +1,8 @@
 
 # Open JDK 8 - Docker Image
 
+[![Docker Pulls (All)](https://img.shields.io/docker/pulls/turquoisespace/open-jdk-8)](https://hub.docker.com/r/turquoisespace/open-jdk-8)
+
 - Dockerized Open JDK 8
 - Latest alpine linux
 - Latest JRE build version
@@ -10,6 +12,8 @@
 
 
 ## Image Pull with Tag
+
+[![Docker Image Size](https://img.shields.io/docker/image-size/turquoisespace/open-jdk-8/jdk8u372-ga-jre-x64-alpine-linux-hotspot?color=orange)](https://hub.docker.com/layers/turquoisespace/open-jdk-8/jdk8u372-ga-jre-x64-alpine-linux-hotspot/images/sha256-db1d78bfcdf6c229c74d26705648a25f72f8ab18e9d70ffdcf19f8567c01b6e1?context=explore)
 
 ```
 docker pull turquoisespace/open-jdk-8:latest-jre-x64-alpine-linux-hotspot
