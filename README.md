@@ -1,6 +1,8 @@
 
 # Open JDK 8 - Docker Image
 
+![Visit Count](https://profile-counter.glitch.me/TurquoiseSpace_open-jdk-8/count.svg)
+
 [![Docker Pulls (All)](https://img.shields.io/docker/pulls/turquoisespace/open-jdk-8)](https://hub.docker.com/r/turquoisespace/open-jdk-8)
 
 - Dockerized Open JDK 8
