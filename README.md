@@ -15,7 +15,7 @@
 
 ## Image Pull with Tag
 
-[![Docker Image Size](https://img.shields.io/docker/image-size/turquoisespace/open-jdk-8/jdk8u382-ga-jre-x64-alpine-linux-hotspot?color=orange)](https://hub.docker.com/layers/turquoisespace/open-jdk-8/jdk8u382-ga-jre-x64-alpine-linux-hotspot/images/sha256-?context=explore)
+[![Docker Image Size](https://img.shields.io/docker/image-size/turquoisespace/open-jdk-8/jdk8u382-ga-jre-x64-alpine-linux-hotspot?color=orange)](https://hub.docker.com/layers/turquoisespace/open-jdk-8/jdk8u382-ga-jre-x64-alpine-linux-hotspot/images/sha256-44771c5ee5a9502273515dedac5203cfe432b7f2a43b19a11a2bbb66d9d57cc6?context=explore)
 
 ```
 docker pull turquoisespace/open-jdk-8:latest-jre-x64-alpine-linux-hotspot
