@@ -15,7 +15,7 @@
 #
 # ------------------------------------------------------------------------------
 
-FROM alpine:3.17.3
+FROM alpine:3.18.3
 
 # Default to UTF-8 file.encoding
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
@@ -31,8 +31,8 @@ RUN apk -vv info | sort
 
 ENV GLIBC_VER="2.35-r1"
 ENV ALPINE_GLIBC_REPO="https://github.com/sgerrand/alpine-pkg-glibc/releases/download"
-ENV GCC_LIBS_URL="https://archive.archlinux.org/packages/g/gcc-libs/gcc-libs-12.2.1-4-x86_64.pkg.tar.zst"
-ENV GCC_LIBS_SHA256="9f6ed8f56d753071cfd0ece95c09ff7b6eb9131182ed5b5b1bd435feb7a00c31"
+ENV GCC_LIBS_URL="https://archive.archlinux.org/packages/g/gcc-libs/gcc-libs-13.2.1-3-x86_64.pkg.tar.zst"
+ENV GCC_LIBS_SHA256="8d4658790a832599b38c6403ce669d19f64fbdaddbe59c30213b192b898459e7"
 ENV SGERRAND_RSA_SHA256="823b54589c93b02497f1ba4dc622eaef9c813e6b0f0ebbb2f771e32adf9f4ef2"
 
 RUN curl -LfsS https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub
@@ -70,10 +70,10 @@ RUN case "$(apk --print-arch)" in \
          ;; \
     esac;
 
-ENV JAVA_VERSION jdk8u372-b07
+ENV JAVA_VERSION jdk8u382-b05
 ENV JAVA_HOME=/opt/java/openjdk
-ENV ESUM="95d8cb8b5375ec00a064ed728eb60d925d44c1a79fe92f6ca7385b5863d4f78c"
-ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u372b07.tar.gz"
+ENV ESUM="7040d865493f13204194c5a1add63e22516b1fa4481264baa6a5b2614a275a0e"
+ENV BINARY_URL="https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u382b05.tar.gz"
 
 RUN curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL}
 RUN echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;
